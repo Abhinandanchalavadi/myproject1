@@ -5,7 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
-public class WebPageTest
+public class webpagetest
 {
     private static WebDriver driver;
     @BeforeTest
@@ -14,13 +14,13 @@ public class WebPageTest
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         Thread.sleep(2000);
-        driver.get("https://github.com/Abhinandanchalavadi/myproject1.git");
+        driver.get("https://Abhinandanchalavadi.github.io/myproject");
     }
     @Test
     public void titleValidationTest()
     {
         String actualTitle = driver.getTitle();
-        String expectedTitle = "My simple website";
+        String expectedTitle = "myproject";
         Assert.assertEquals(actualTitle, expectedTitle);
         assertTrue(true, "Title should contain 'simple'");
     }
